@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shpark.mnist.MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@android:color/darker_gray"
+            />
+
+        <ImageView
+            android:id="@+id/resizedImageView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/imageView"
+            tools:layout_marginLeft="10dp"
+            tools:layout_marginTop="10dp"
+            app:srcCompat="@android:color/darker_gray"
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/resizedImageView"
+            android:layout_below="@+id/imageView"
+            android:inputType="none" />
+
+        <Button
+            android:id="@+id/predictBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_toRightOf="@+id/editText"
+            android:text="Predict"
+            />
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_toRightOf="@+id/predictBtn"
+            android:text="Clear"
+            />
+
+        <Button
+            android:id="@+id/testBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_toRightOf="@+id/clearBtn"
+            android:text="Test"
+            />
+
+        <EditText
+            android:id="@+id/labelText"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:inputType="none" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
